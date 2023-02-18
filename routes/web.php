@@ -25,6 +25,9 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
+Auth::routes();
+
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
 Route::prefix('admin')
@@ -40,8 +43,8 @@ Route::prefix('admin')
     Route::get('/font_icon', [CategoryController::class, 'font_icon'])->name('font_icon');
     Route::get('settings/socials', [SettingController::class, 'editSocials'])->name('socials.setting');
     Route::put('settings/socials', [SettingController::class, 'updateSocials'])->name('socials.update');
-    Route::get('settings/web-info/{webinfo}', [SettingController::class, 'editWebInfo'])->name('webinfo.setting');
-    // Route::put('settings/web-info/{webinfo}', [SettingController::class, 'editWebInfo'])->name('edit_socials');
+    Route::get('settings/web-info', [SettingController::class, 'editWebInfo'])->name('webinfo.setting');
+    Route::put('settings/web-info', [SettingController::class, 'updateWebInfo'])->name('webinfo.update');
     
 });
 
@@ -54,9 +57,7 @@ Route::name('clients.')
     Route::get('/{post:slug}', [HomeController::class, 'singlePost'])->name('single_post');
 });
 
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 Route::group(['prefix' => 'filemanager', 'middleware' => ['web', 'auth']], function () {
     \UniSharp\LaravelFilemanager\Lfm::routes();

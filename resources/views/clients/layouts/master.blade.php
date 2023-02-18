@@ -21,7 +21,7 @@
     <meta property="og:image"         content="https://www.your-domain.com/path/image.jpg" />
 
 
-    <link rel="shortcut icon" type="image/x-icon" href="{{asset('clients/assets/img/trada_favicon.png')}}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{$website->logo ?? asset('clients/assets/img/trada_favicon.png')}}">
     <!-- Place favicon.ico in the root directory -->
 
     <!-- CSS here -->

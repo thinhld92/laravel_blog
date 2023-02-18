@@ -188,13 +188,13 @@
           </a>
           <ul class="nav-main-submenu">
             <li class="nav-main-item">
-              <a class="nav-main-link" href="{{route('admin.posts.index')}}">
+              <a class="nav-main-link" href="{{route('admin.webinfo.setting')}}">
                 <i class="nav-main-link-icon fa fa-circle-info"></i>
                 <span class="nav-main-link-name">Website Info</span>
               </a>
             </li>
             <li class="nav-main-item">
-              <a class="nav-main-link" href="{{route('admin.socials.setting', 1)}}">
+              <a class="nav-main-link" href="{{route('admin.socials.setting')}}">
                 <i class="nav-main-link-icon fa fa-link"></i>
                 <span class="nav-main-link-name">Socials Link</span>
               </a>

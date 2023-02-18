@@ -24,8 +24,8 @@ return new class extends Migration
             $table->string('image_caption');
             $table->string('source')->nullable();
             $table->integer('category_id')->unsigned()->nullable();
-            $table->integer('user_id')->unsigned->nullable();
-            $table->integer('views_count')->unsigned->default(0)->index();
+            $table->integer('user_id')->unsigned()->nullable();
+            $table->integer('views_count')->unsigned()->default(0)->index();
             $table->timestamp('published_at')->default(now());
             $table->date('hot_date');
             $table->date('new_date');

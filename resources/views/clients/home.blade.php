@@ -10,22 +10,24 @@
           $hottest_posts->forget(0);
         }
       @endphp
-          <div class="col-lg-8">
+        <div class="col-lg-8">
+          @if (isset($first_post))
               <div class="tgbanner__five-item big-post">
-                  <div class="tgbanner__five-thumb tgImage__hover">
-                      <a href="{{route('clients.cat_posts', $first_post->category)}}" class="tags">{{$first_post->category->name}}</a>
-                      <a href="{{route('clients.single_post', $first_post)}}">
-                          <img src="{{$first_post->image}}" alt="{{$first_post->image_caption}}">
-                      </a>
-                  </div>
-                  <div class="tgbanner__five-content">
-                      <ul class="tgbanner__content-meta list-wrap">
-                          <li><span class="by">By</span> <a href="{{route('clients.author_posts', $first_post->user)}}">{{$first_post->user->username}}</a></li>
-                          <li>{{$first_post->created_at->diffForHumans()}}</li>
-                      </ul>
-                      <h2 class="title tgcommon__hover"><a href="{{route('clients.single_post', $first_post)}}">{{$first_post->title}}</a></h2>
-                  </div>
+                <div class="tgbanner__five-thumb tgImage__hover">
+                    <a href="{{route('clients.cat_posts', $first_post->category)}}" class="tags">{{$first_post->category->name}}</a>
+                    <a href="{{route('clients.single_post', $first_post)}}">
+                        <img src="{{$first_post->image}}" alt="{{$first_post->image_caption}}">
+                    </a>
+                </div>
+                <div class="tgbanner__five-content">
+                    <ul class="tgbanner__content-meta list-wrap">
+                        <li><span class="by">By</span> <a href="{{route('clients.author_posts', $first_post->user)}}">{{$first_post->user->username}}</a></li>
+                        <li>{{$first_post->created_at->diffForHumans()}}</li>
+                    </ul>
+                    <h2 class="title tgcommon__hover"><a href="{{route('clients.single_post', $first_post)}}">{{$first_post->title}}</a></h2>
+                </div>
               </div>
+            @endif
           </div>
           <div class="col-lg-4 d-flex flex-wrap d-lg-block gx-30">
             @foreach ($hottest_posts as $post)

@@ -23,6 +23,7 @@
             }
         @endphp
           <div class="col-xl-6 col-lg-8">
+            @if (isset($first_story))
               <div class="handpicked__item big-post">
                   <div class="handpicked__thumb tgImage__hover">
                       <a href="{{route('clients.single_post', $first_story)}}"><img src="{{$first_story->image}}" alt="img"></a>
@@ -36,6 +37,7 @@
                       <h2 class="title tgcommon__hover"><a href="{{route('clients.single_post', $first_story)}}">{{$first_story->title}}</a></h2>
                   </div>
               </div>
+            @endif
           </div>
           <div class="col-xl-6">
               <div class="handpicked__sidebar-post">

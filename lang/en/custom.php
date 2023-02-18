@@ -39,13 +39,30 @@ return [
       'published_at' => 'Published time',
       'content' => 'Post Content',
     ],
+    'web_info' => [
+      'author' => 'Author',
+      'author_description' => 'Author Description',
+      'meta_title' => 'Meta Title',
+      'meta_description' => 'Meta Description',
+      'meta_keywords' => 'Meta Keywords',
+      'meta_robots' => 'Meta Robots',
+      'meta_type' => 'Meta Type Website',
+      'google_verification' => 'Google Verification',
+      'google_analytics' => 'Google Analytics',
+      'alexa_analytics' => 'Alexa Analytics',
+      'logo' => 'Logo',
+      'author_image' => 'Author Image',
+
+    ],
     
   ],
 
   'titles' => [
     'user_info' => 'User info',
+    'socials_info' => 'Socials info',
     'category_info' => 'Category info',
     'post_info' => 'Post info',
+    'web_info' => 'Website info',
     'tag_info' => 'Tag info',
   ],
 
