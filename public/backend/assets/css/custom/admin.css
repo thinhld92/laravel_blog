@@ -1,0 +1,28 @@
+@media (min-width: 1200px) {
+    #page-container.main-content-narrow > #page-header .content-header,
+    #page-container.main-content-narrow > #page-header .content,
+    #page-container.main-content-narrow > #main-container .content,
+    #page-container.main-content-narrow > #page-footer .content {
+        width: 100%;
+    }
+}
+
+@media (min-width: 768px) {
+    .content {
+        width: 100%;
+        margin: 0 auto;
+        padding: 1rem 1rem 1px;
+        overflow-x: visible;
+    }
+}
+
+#holder img {
+    max-width: 100% !important;
+    height: auto !important;
+    /* border-radius: 50%; */
+}
+
+.img-post.img-thumb {
+    max-width: 200px;
+    height: auto;
+}
