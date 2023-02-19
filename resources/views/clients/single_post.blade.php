@@ -109,8 +109,9 @@
             </div>
         </div>
     </div>
-    <div class="blog-avatar-wrap">
-      <div class="fb-comments" data-href="{{\URL::current()}}" data-width="600" data-numposts="10">
+    <div class="blog-prev-next-posts" id="facebook-comments-box">
+      <h2 class="title">Comments</h2>
+      <div class="fb-comments" data-href="{{\URL::current()}}" data-width="100%" data-numposts="10">
       </div>
     </div>
 </div>
