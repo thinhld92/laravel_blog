@@ -1,5 +1,12 @@
 <!doctype html>
 <html class="no-js" lang="en">
+  @php
+      $logo_image = 'clients/assets/img/logo/trada_logo.png';
+      $logo_image = $main_logo ?? $logo_image;
+      $logo_image = $category->image ?? $logo_image;
+      $logo_image = $post->image ?? $logo_image;
+      
+  @endphp
 
 <head>
     <meta charset="utf-8">
@@ -10,7 +17,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="canonical" href="{{$canonical ?? ''}}">
     {{-- <meta name="robots" content="index,follow"> --}}
-    <meta name="author" content="cafeforex">
+    <meta name="author" content="{{$page_author ?? 'cafeforex'}}">
     <meta name="robots" content="noindex, nofollow">
 
     <meta property="og:url"           content="{{$canonical ?? ''}}" />
@@ -18,7 +25,7 @@
     <meta property="og:site_name"     content="Cafeforex">
     <meta property="og:title"         content="{{$page_title ?? 'Cafeforex - Nơi góp nhặt những trải nghiệm tài chính cá nhân bổ ích nhất.'}}" />
     <meta property="og:description"   content="{{$meta_description ?? 'Cafeforex - Nơi góp nhặt những trải nghiệm tài chính cá nhân bổ ích nhất.'}}" />
-    <meta property="og:image"         content="https://www.your-domain.com/path/image.jpg" />
+    <meta property="og:image"         content="{{asset($logo_image)}}" />
 
 
     <link rel="shortcut icon" type="image/x-icon" href="{{$website->logo ?? asset('clients/assets/img/trada_favicon.png')}}">
@@ -126,7 +133,8 @@
     <script src="{{asset('clients/assets/js/jquery.marquee.min.js')}}"></script>
     <script src="{{asset('clients/assets/js/imageRevealHover.js')}}"></script>
     <script src="{{asset('clients/assets/js/swiper-bundle.js')}}"></script>
-    <script src="{{asset('clients/assets/js/TweenMax.min.js')}}"></script>
+    {{-- <script src="{{asset('clients/assets/js/TweenMax.min.js')}}"></script> --}}
+    <script src="{{asset('clients/assets/js/gsap.min.js')}}"></script>
     <script src="{{asset('clients/assets/js/slick.min.js')}}"></script>
     <script src="{{asset('clients/assets/js/ajax-form.js')}}"></script>
     <script src="{{asset('clients/assets/js/wow.min.js')}}"></script>

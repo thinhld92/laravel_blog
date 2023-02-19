@@ -51,9 +51,12 @@
         </div>
         <div class="col-lg-5 offset-lg-1">
           <div class="mb-2">
-            <label class="form-label" for="font_icon">{{ __('custom.attributes.font_icon') }}</span></label>
+            <label class="form-label" for="order">{{ __('custom.attributes.font_icon') }}</span></label>
             <input type="text" class="form-control" id="font_icon" name="font_icon" placeholder="{{ __('custom.attributes.font_icon') }} Input" value="{{old('font_icon')}}">
-            
+          </div>
+          <div class="mb-2">
+            <label class="form-label" for="order">{{ __('custom.attributes.categories.order') }}</span></label>
+            <input type="number" min="1" class="form-control" id="order" name="order" placeholder="{{ __('custom.attributes.categories.order') }} Input" value="{{old('order')}}">
           </div>
         </div>
       </div>

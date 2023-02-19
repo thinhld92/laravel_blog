@@ -129,7 +129,7 @@
             <p>{{$post->description}}</p>
             <ul class="post__activity list-wrap">
                 <li><i class="fal fa-signal"></i> 1.5k</li>
-                <li><a href="{{route('clients.single_post', $post)}}"><i class="fal fa-comment-dots"></i> 150</a></li>
+                <li><a href="{{route('clients.single_post', $post)}}#facebook-comments-box"><i class="fal fa-comment-dots"></i> 150</a></li>
                 <li><i class="fal fa-share-alt"></i> 32</li>
             </ul>
         </div>

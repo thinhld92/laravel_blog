@@ -31,6 +31,7 @@ class AppServiceProvider extends ServiceProvider
         Paginator::useBootstrap();
         $canonical = $this->app->request->url();
         $categories = Category::whereNull('parent_id')
+        ->orderBy('order', 'asc')
         ->with('recursiveCategories')
         ->get();
 

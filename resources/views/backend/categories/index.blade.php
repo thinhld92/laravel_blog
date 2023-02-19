@@ -16,6 +16,7 @@
           <th>Name</th>
           <th class="d-none d-sm-table-cell" style="width: 30%;">Description</th>
           <th class="d-none d-sm-table-cell" style="width: 15%;">Slug</th>
+          <th class="d-none d-sm-table-cell" style="width: 15%;">Order</th>
           <th style="width: 15%;">Actions</th>
         </tr>
       </thead>
@@ -30,6 +31,7 @@
           <td class="fw-semibold">{{ str_repeat('--/', $category->level) }} {{$category->name}}</td>
           <td class="d-none d-sm-table-cell">{{$category->description}}</td>
           <td class="d-none d-sm-table-cell">{{$category->slug}}</td>
+          <td class="d-none d-sm-table-cell">{{$category->order}}</td>
           <td class="fw-semibold">
             <a href="{{ route('admin.categories.edit', $category->id) }}"><i class="fa fa-pencil btn btn-warning"></i></a>
             <a href="">

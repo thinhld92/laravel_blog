@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string('image')->nullable();
             $table->string('font_icon')->nullable();
             $table->integer('parent_id')->unsigned()->nullable();
+            $table->integer('order')->nullable()->default(1);
             $table->smallInteger('show_in_menu')->default(1);
             $table->smallInteger('show_in_home')->default(1);
             $table->smallInteger('status')->default(1);

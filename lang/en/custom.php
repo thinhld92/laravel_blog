@@ -31,6 +31,7 @@ return [
     'username'  => 'Username',
     'categories' => [
       'parent_id' => 'Parent category',
+      'order' => 'Order',
       'category_id' => 'Category'
     ],
     'posts' => [

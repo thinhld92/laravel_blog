@@ -50,6 +50,11 @@ class HomeController extends Controller
         $this->data['post'] = $post;
         $this->data['next_post'] = Post::where('id', '>', $post->id)->orderBy('id')->first();
         $this->data['previous_post'] = Post::where('id', '<', $post->id)->orderBy('id','desc')->first();
+        
+        // seo
+        $this->data['page_title'] = $post->title;
+        $this->data['meta_description'] = $post->meta_description ?? $post->description;
+        $this->data['meta_keyword'] = $post->meta_keyword;
 
         $cookie_name = (Str::replace('.','',($request->ip())).'-'. $post->slug);
         if(Cookie::get($cookie_name) == ''){

@@ -24,6 +24,7 @@ class CategoryController extends Controller
     public function index()
     {
         $listCategories = Category::whereNull('parent_id')
+                                ->orderBy('order', 'asc')
                                 ->with('recursiveCategories')
                                 ->get();
         $level = 0;
@@ -63,6 +64,7 @@ class CategoryController extends Controller
         $category->description = $request->description;
         $category->image = $request->image;
         $category->parent_id = $request->parent_id;
+        $category->order = $request->order;
         $category->font_icon = $request->font_icon;
         $category->seo_title = $request->seo_title;
         $category->seo_alias = $request->seo_alias;
@@ -116,6 +118,7 @@ class CategoryController extends Controller
         $category->description = $request->description;
         $category->image = $request->image;
         $category->parent_id = $request->parent_id;
+        $category->order = $request->order;
         $category->font_icon = $request->font_icon;
         $category->seo_title = $request->seo_title;
         $category->seo_alias = $request->seo_alias;
