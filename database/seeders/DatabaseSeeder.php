@@ -56,6 +56,14 @@ class DatabaseSeeder extends Seeder
             'group_id' => 1
         ]);
 
+        \App\Models\User::factory()->create([
+            'name' => 'Hoàng Đặng',
+            'email' => 'hoangdv@gmail.com',
+            'username' => 'promickey',
+            'password' => bcrypt(123456),
+            'group_id' => 1
+        ]);
+
         // \App\Models\User::factory(10)->create();
     }
 }

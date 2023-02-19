@@ -33,7 +33,7 @@
   <div class="blog-details-wrap">
     <ul class="tgbanner__content-meta list-wrap">
         <li class="category"><a href="{{route('clients.cat_posts', $post->category)}}">{{$post->category->name}}</a></li>
-        <li><span class="by">By</span> <a href="blog.html">{{$post->user->username}}</a></li>
+        <li><span class="by">By</span> <a href="{{route('clients.author_posts', $post->user)}}">{{$post->user->username}}</a></li>
         <li>{{$post->created_at}}</li>
         {{-- <li>23 comments</li> --}}
     </ul>
@@ -75,7 +75,7 @@
         </div>
         <div class="blog-avatar-content">
             <p>{{$post->user->profile_description}}</p>
-            <h5 class="name">Alison Fiano</h5>
+            <h5 class="name">{{ucfirst($post->user->username)}}</h5>
             <span class="designation">{{$post->user->group->name}}</span>
         </div>
     </div>
@@ -108,6 +108,10 @@
               @endif
             </div>
         </div>
+    </div>
+    <div class="blog-avatar-wrap">
+      <div class="fb-comments" data-href="{{\URL::current()}}" data-width="600" data-numposts="10">
+      </div>
     </div>
 </div>
 
